@@ -1,0 +1,372 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "hey",
+        "intent": "general.greet",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "general.greet",
+        "entities": []
+      },
+      {
+        "text": "hi",
+        "intent": "general.greet",
+        "entities": []
+      },
+      {
+        "text": "hello there",
+        "intent": "general.greet",
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "general.greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "general.greet",
+        "entities": []
+      },
+      {
+        "text": "moin",
+        "intent": "general.greet",
+        "entities": []
+      },
+      {
+        "text": "how are you?",
+        "intent": "general.greet",
+        "entities": []
+      },
+      {
+        "text": "howdy?",
+        "intent": "general.greet",
+        "entities": []
+      },
+      {
+        "text": "hola",
+        "intent": "general.greet",
+        "entities": []
+      },
+      {
+        "text": "bonjour",
+        "intent": "general.greet",
+        "entities": []
+      },
+      {
+        "text": "salut",
+        "intent": "general.greet",
+        "entities": []
+      },
+      {
+        "text": "hi there",
+        "intent": "general.greet",
+        "entities": []
+      },
+      {
+        "text": "I am Yegor",
+        "intent": "general.guest.name",
+        "entities": [
+          {
+            "entity": "guestname",
+            "value": "Yegor",
+            "start": 5,
+            "end": 10
+          }
+        ]
+      },
+      {
+        "text": "My name is Karim",
+        "intent": "general.guest.name",
+        "entities": [
+          {
+            "entity": "guestname",
+            "value": "Karim",
+            "start": 11,
+            "end": 16
+          }
+        ]
+      },
+      {
+        "text": "My room number is 805",
+        "intent": "general.guest.room",
+        "entities": [
+          {
+            "entity": "room",
+            "value": "805",
+            "start": 18,
+            "end": 21
+          }
+        ]
+      },
+      {
+        "text": "I am staying in room 805",
+        "intent": "general.guest.room",
+        "entities": [
+          {
+            "entity": "room",
+            "value": "805",
+            "start": 21,
+            "end": 24
+          }
+        ]
+      },
+      {
+        "text": "bye",
+        "intent": "general.goodbye",
+        "entities": []
+      },
+      {
+        "text": "goodbye",
+        "intent": "general.goodbye",
+        "entities": []
+      },
+      {
+        "text": "have a nice day",
+        "intent": "general.goodbye",
+        "entities": []
+      },
+      {
+        "text": "see you around",
+        "intent": "general.goodbye",
+        "entities": []
+      },
+      {
+        "text": "bye bye",
+        "intent": "general.goodbye",
+        "entities": []
+      },
+      {
+        "text": "see you later",
+        "intent": "general.goodbye",
+        "entities": []
+      },
+      {
+        "text": "I am Veronika",
+        "intent": "general.guest.name",
+        "entities": [
+          {
+            "start": 5,
+            "end": 13,
+            "value": "Veronika",
+            "entity": "guestname"
+          }
+        ]
+      },
+      {
+        "text": "My name is Vasiliy Pupkin",
+        "intent": "general.guest.name",
+        "entities": [
+          {
+            "start": 11,
+            "end": 25,
+            "value": "Vasiliy Pupkin",
+            "entity": "guestname"
+          }
+        ]
+      },
+      {
+        "text": "I am Ladak",
+        "intent": "general.guest.name",
+        "entities": [
+          {
+            "start": 5,
+            "end": 10,
+            "value": "Ladak",
+            "entity": "guestname"
+          }
+        ]
+      },
+      {
+        "text": "My name is Maria",
+        "intent": "general.guest.name",
+        "entities": [
+          {
+            "start": 11,
+            "end": 16,
+            "value": "Maria",
+            "entity": "guestname"
+          }
+        ]
+      },
+      {
+        "text": "I am Josh",
+        "intent": "general.guest.name",
+        "entities": [
+          {
+            "start": 5,
+            "end": 9,
+            "value": "Josh",
+            "entity": "guestname"
+          }
+        ]
+      },
+      {
+        "text": "My name Nick",
+        "intent": "general.guest.name",
+        "entities": [
+          {
+            "start": 8,
+            "end": 12,
+            "value": "Nick",
+            "entity": "guestname"
+          }
+        ]
+      },
+      {
+        "text": "My name is Jim",
+        "intent": "general.guest.name",
+        "entities": [
+          {
+            "start": 11,
+            "end": 14,
+            "value": "Jim",
+            "entity": "guestname"
+          }
+        ]
+      },
+      {
+        "text": "My room number is 100",
+        "intent": "general.guest.room",
+        "entities": [
+          {
+            "start": 18,
+            "end": 21,
+            "value": "100",
+            "entity": "room"
+          }
+        ]
+      },
+      {
+        "text": "My room number is 200",
+        "intent": "general.guest.room",
+        "entities": [
+          {
+            "start": 18,
+            "end": 21,
+            "value": "200",
+            "entity": "room"
+          }
+        ]
+      },
+      {
+        "text": "My room number is 20",
+        "intent": "general.guest.room",
+        "entities": [
+          {
+            "start": 18,
+            "end": 20,
+            "value": "20",
+            "entity": "room"
+          }
+        ]
+      },
+      {
+        "text": "I am staying in room 5",
+        "intent": "general.guest.room",
+        "entities": [
+          {
+            "start": 21,
+            "end": 22,
+            "value": "5",
+            "entity": "room"
+          }
+        ]
+      },
+      {
+        "text": "I am staying in room 921",
+        "intent": "general.guest.room",
+        "entities": [
+          {
+            "start": 21,
+            "end": 24,
+            "value": "921",
+            "entity": "room"
+          }
+        ]
+      },
+      {
+        "text": "I am staying in room 17",
+        "intent": "general.guest.room",
+        "entities": [
+          {
+            "start": 21,
+            "end": 23,
+            "value": "17",
+            "entity": "room"
+          }
+        ]
+      },
+      {
+        "text": "What is my name?",
+        "intent": "general.whatismyname",
+        "entities": []
+      },
+      {
+        "text": "what's my name?",
+        "intent": "general.whatismyname",
+        "entities": []
+      },
+      {
+        "text": "Get slots",
+        "intent": "general.bot.slots",
+        "entities": []
+      },
+      {
+        "text": "Get me slots",
+        "intent": "general.bot.slots",
+        "entities": []
+      },
+      {
+        "text": "Give me slots",
+        "intent": "general.bot.slots",
+        "entities": []
+      },
+      {
+        "text": "show me slots",
+        "intent": "general.bot.slots",
+        "entities": []
+      },
+      {
+        "text": "logout",
+        "intent": "general.guest.logout",
+        "entities": []
+      },
+      {
+        "text": "Logout",
+        "intent": "general.guest.logout",
+        "entities": []
+      },
+      {
+        "text": "i want logout ",
+        "intent": "general.guest.logout",
+        "entities": []
+      },
+      {
+        "text": "i want exit",
+        "intent": "general.guest.logout",
+        "entities": []
+      },
+      {
+        "text": "exit",
+        "intent": "general.guest.logout",
+        "entities": []
+      },
+      {
+        "text": "Exit",
+        "intent": "general.guest.logout",
+        "entities": []
+      },
+      {
+        "text": "GET_STARTED",
+        "intent": "general.greet",
+        "entities": []
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}

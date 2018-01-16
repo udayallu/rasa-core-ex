@@ -1,0 +1,10 @@
+env
+env36
+.vscode
+
+*.pyc
+
+models/*
+
+__pycache__
+rasa_core

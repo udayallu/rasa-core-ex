@@ -1,0 +1,120 @@
+intents:
+  - general.greet
+  - general.goodbye
+  # - general.bot.howto
+  # - general.bot.whoareyou
+  # - general.bot.capabilities
+  # - general.bot.howcanhelpyou
+  # - general.bot.anythingelse
+  # - general.weather.forecast
+  - general.unclear
+  - general.guest.name
+  - general.guest.room
+  - general.whatismyname
+  - general.bot.slots
+  - general.guest.logout
+
+actions:
+  # greeting
+  - utter_general.greet.initial # only if user is not authenticated
+  - utter_general.greet # if user is authenticated
+
+  # bot welcomes
+  - utter_general.bot.howcanhelpyou
+  - utter_general.bot.whoareyou
+  - utter_general.bot.capabilities
+
+  - utter_general.bot.thankyou  
+  - utter_general.bot.anythingelse
+
+  - utter_general.guest.name
+  - utter_general.guest.room
+
+  - utter_general.goodbye
+  
+
+  # if bot didnt understand the user
+  - utter_general.chat.unclear
+
+  # custom actions
+  - actions.ActionGreet
+  - actions.ActionLogout
+  - actions.ActionGetSlots
+  - actions.ActionSetAuthTrue
+
+  # test
+  - utter_general.whatismyname
+  - utter_general.youloggedout
+
+entities:
+  - guestname
+  - room
+
+slots:
+  guestname:
+    type: text
+  room:
+    type: text
+  is_authenticated:
+    type: bool
+
+templates:
+  
+  utter_general.greet.initial:
+  - text: "Welcome to Hotel G."
+  - text: "Hi and welcome to Hotel G."
+  - text: "Greetings from Hotel G."
+
+  utter_general.greet:
+  - text: "Hello, {guestname}"
+
+  utter_general.bot.howcanhelpyou:
+  - text: "How can I help you?"
+  - text: "How can I assist you today?"
+  - text: "How may I assist you?"
+  - text: "What can I do for you today?"
+  - text: "What can I do for you?"
+  - text: "Is there anything I can do for you today?"
+  - text: "Is there anything I can help you with?"
+
+  utter_general.bot.whoareyou:
+  - text: "I am Hosbo, your own personal assistant. I will be assisting you during your stay with us." 
+   
+  utter_general.bot.capabilities:
+  - text: "There is plenty I can do for you to make your stay even more pleasant. By asking me, You can for instance know more about the facilities the hotel is offering, the amenities in your room, make various room requests, book events or restaurants etc..."
+ 
+  utter_general.bot.anythingelse:
+  - text: "Is there anything else I can help you with today?"
+
+  utter_general.chat.unclear:
+  - text: "I am sorry I could not understand your request. Would you mind reformulating?"
+  - text: "I am sorry I did not get that. Would you please repeat?"
+
+  utter_general.bot.thankyou:
+  - text: "Thank you {guestname}"
+
+  utter_general.goodbye:
+  - text: "Let me know if there is anything else I can do for you. If not, have a great day ahead"
+
+  utter_general.guest.name:
+  - text: "Would you mind sharing with me your name?"
+  - text: "What is your name?"
+
+  utter_general.guest.room:
+  - text: "What is your room number?"
+  - text: "In which room are you staying?"
+
+  utter_room.bedding.pillow.types:
+  - text: "Sure, what type of pillow would you like to have? Here is our Pillow menu 
+      G -- A simple and homely cotton roll pillow for every occasion
+      GLAMOROUS -- Feeling silky and sexy? Indulge yourself with this soft, sensual pillow.
+      GRUMPY -- Feeling restless? Can’t Sleep? Legend has it that this therapeutic pillow helps relax your mind and relieve stress.
+      GENIAL -- You’re allergic to feathers this is for you. Simple and comfortable, with synthetic fibre and perfect consistency to soothe your head and neck.
+      GUILTY -- So you snore a little? No problem. This NASA Memory Foam pillow will help your posture and help you breath more easily."
+
+  # Test bot utter
+  utter_general.whatismyname:
+    - text: "Your name is {guestname}!"
+  utter_general.youloggedout:
+    - text: "{guestname}, you have just logged out!"
+ 
