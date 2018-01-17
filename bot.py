@@ -23,9 +23,6 @@ def train_dialogue(domain_file="domain.yml",
                    model_path="models/dialogue",
                    training_data_file="data/stories.md"):
 
-    if rasa_core_version == '0.8.0a4':
-        training_data_file="data/stories2.md"
-
     agent = Agent(domain_file,
                   policies=[MemoizationPolicy(), KerasPolicy()])
 
@@ -54,36 +51,23 @@ def train_nlu():
 
     return model_directory
 
-
 def run(serve_forever=True):
     interpreter = RasaNLUInterpreter("models/nlu/default/current")
     agent = Agent.load("models/dialogue", interpreter=interpreter)
 
-    input_channel = None
-    fb_verify = 'dogs'
-    fb_secret = 'ea2738f81a4c837ac6bcf2b446b7898d'
-    fb_tokens = None
+    fb_verify = 'fractal'
+    fb_secret = '3db0452e1e4b787d3058e14c624839bc'
 
-    if rasa_core_version == '0.8.0a4':
-        fb_tokens = 'EAACJuymZCam0BAMLFKDvp864tSzAzczByMcxHtMuqQ8wNR4WKcXjblHKNg9E8EtV2WyJEsYR5WWMDgJ9nbvF4zinJPqQsDNiaMRqs8APvgXIK0ASwKpcWxIpLW5XRD78x1SnypuSirfiVmXBP9qXKTBAZAHaZAdU91qLuDFWQZDZD'
-        input_channel = FacebookInput(
-            fb_verify,
-            fb_secret,
-            fb_tokens
-        )
-    elif rasa_core_version == '0.7.9':
-        fb_tokens = {
-            '323018891534316': 'EAACJuymZCam0BAMLFKDvp864tSzAzczByMcxHtMuqQ8wNR4WKcXjblHKNg9E8EtV2WyJEsYR5WWMDgJ9nbvF4zinJPqQsDNiaMRqs8APvgXIK0ASwKpcWxIpLW5XRD78x1SnypuSirfiVmXBP9qXKTBAZAHaZAdU91qLuDFWQZDZD',
-            '1722277897829614': 'EAACJuymZCam0BALZAZADB1hDap4LDz9zL1URRtjKMQbXwSoFF17hRUxvZBZBcbE6fHAQd1HHmWBZCBYd8rdXR0YYUU3L9WgfQxMXjjpBjLbw8w7ZCMcHFL5X9xZB7NkZBXWDZAZBNH8WMf6mlgYDTu9EJd4SmLdm4qefqZADos0gPHY1RwZDZD',
-        }
-        input_channel = FacebookInput(
-            fb_verify,
-            fb_secret,
-            fb_tokens,
-            True
-        )
-    
+    fb_tokens = {
+        '162871184345992': 'EAAbctRsA3XkBAPeTSd4Q7SKuL0YvINDj30xYquxZC0tJfIZCCzahlDP78D63cTNqpIOQfmeWrnq2B1EFjtf5LHWA7UUQq4imZBSueYtZADcWZARxNWU1kj1SL5dVIn7nxZAj9wZCWmVOZCIkwwU4itzSzu1ZBU41vZC9GJrvbG75i0S5aO7rAYexwt',
+    }
 
+    input_channel = FacebookInput(
+        fb_verify,
+        fb_secret,
+        fb_tokens,
+        True
+    )
 
     if serve_forever:
         agent.handle_channel(HttpInputChannel(5000, '/app', input_channel))
@@ -91,8 +75,7 @@ def run(serve_forever=True):
 
 
 if __name__ == '__main__':
-    if rasa_core_version == '0.8.0a4':
-        utils.configure_colored_logging(loglevel="DEBUG")
+    # utils.configure_colored_logging(loglevel="DEBUG")
     try:
         parser = argparse.ArgumentParser(description='starts the bot')
 
