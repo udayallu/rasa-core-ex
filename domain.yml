@@ -13,6 +13,7 @@ intents:
   - general.whatismyname
   - general.bot.slots
   - general.guest.logout
+  - general.currency.request
 
 actions:
   # greeting
@@ -41,6 +42,7 @@ actions:
   - actions.ActionLogout
   - actions.ActionGetSlots
   - actions.ActionSetAuthTrue
+  - actions.ActionCurrency
 
   # test
   - utter_general.whatismyname
