@@ -1,35 +1,39 @@
-## Introduction
-* general.greet                
+## story 1
+* _general.greet                
   - action_greet
   > check_get_guest_details
-* general.unclear
+* _general.unclear
   - utter_general.chat.unclear
 
 ## Guest details 1
 > check_get_guest_details
-* general.guest.name{"guestname": "yegor"}
+* _general.guest.name[guestname=yegor]
   - utter_general.bot.thankyou
   - utter_general.guest.room
-* general.guest.room{"room": "805"}
+* _general.guest.room[room=805]
   - utter_general.bot.thankyou
   - action_set_auth_true
 
 ## Say name
-  * general.guest.name{"guestname": "kirill"}
+* _general.guest.name[guestname=yegor]
   - utter_general.bot.thankyou
 
 ## Check my name
-* general.whatismyname
+* _general.whatismyname
   - utter_general.whatismyname
 
 ## Get slots
-* general.bot.slots
+* _general.bot.slots
   - action_getslots
 
 ## Say goodby
-* general.goodbye
+* _general.goodbye
   - utter_general.goodbye
 
 ## Say logout
-* general.guest.logout
+* _general.guest.logout
   - action_logout
+
+## Currency
+* _general.currency.request
+  - action_currency_answer

@@ -67,3 +67,16 @@ class ActionLogout(Action):
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_template('utter_general.youloggedout', guestname=tracker.get_slot('guestname'))
         return [AllSlotsReset()]
+
+
+class ActionCurrency(Action):
+    """
+    Let the user to receive the info about current $.
+    """
+
+    def name(self):
+        return 'action_currency_answer'
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message('This action receives the current currency')
+        return []

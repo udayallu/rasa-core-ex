@@ -364,6 +364,41 @@
         "text": "GET_STARTED",
         "intent": "general.greet",
         "entities": []
+      },
+      {
+        "text": "Let me know the currency",
+        "intent": "general.currency.request",
+        "entities": []
+      },
+      {
+        "text": "How about the currency",
+        "intent": "general.currency.request",
+        "entities": []
+      },
+      {
+        "text": "How much does the dollar cost? ",
+        "intent": "general.currency.request",
+        "entities": []
+      },
+      {
+        "text": "How Much A Dollar Cost",
+        "intent": "general.currency.request",
+        "entities": []
+      },
+      {
+        "text": "Dollar",
+        "intent": "general.currency.request",
+        "entities": []
+      },
+      {
+        "text": "$",
+        "intent": "general.currency.request",
+        "entities": []
+      },
+      {
+        "text": "Currency",
+        "intent": "general.currency.request",
+        "entities": []
       }
     ],
     "regex_features": [],
